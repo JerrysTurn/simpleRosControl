@@ -1,5 +1,5 @@
 ## simpleRosControl
-### some change...
+### some change..
 ### change in local repository
 ```bash
 # Make catkin workspace
