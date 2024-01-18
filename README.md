@@ -20,7 +20,7 @@ roslaunch cobot_simulation spawn_robot.launch
 ```
 joint value is not fixed in this point. So when sim time pass, manipulator fall down
 
-## spawn robot with controller
+### spawn robot with controller
 ```bash
 roslaunch cobot_simulation spawn_robot_w_controller.launch
 ```
