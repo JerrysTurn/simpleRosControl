@@ -5,6 +5,7 @@ cobot:
     publish_rate: 50
 
   # Position controllers and set up PID
+  # type: $(hardware interface controller)/(controller_manager controller)
   joint1_position_controller:
     type: effort_controllers/JointPositionController
     joint: base_link__link1

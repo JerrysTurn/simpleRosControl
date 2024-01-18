@@ -68,7 +68,7 @@
     <xacro:gripper parent="link5" origin_xyz="0 0.0 0.125" />
 
     <!-- put transmission in each joint-->
-
+    <!-- transmission xacro to pass joint value -->
     <xacro:transmission name="trans_base_link__link1" 
                         joint_name="base_link__link1" 
                         actuator_name="motor_base_link__link1" />

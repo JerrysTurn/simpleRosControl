@@ -1,26 +1,37 @@
 ## simpleRosControl
-### some change..
-### change in local repository
+### Setup
+make new workspace to get rid of package dependancies
 ```bash
 # Make catkin workspace
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
+mkdir -p ~/cobotSim_ws/src
+cd ~/cobotSim/src
 
 # Clone git repo
-git clone https://github.com/Hongyoungjin/stable-pushnet-datagen.git
+git clone https://github.com/JerrysTurn/simpleRosControl.git
 
 # Catkin workspace
 cd ..
-catkin_ws
-cd src
+catkin_make
 ```
-# Stable-PushNet-Datagen
-![Ubuntu](https://img.shields.io/badge/Ubuntu-20.04-green)
-![Python](https://img.shields.io/badge/Python-3.8.10-blue)
-![Torch](https://img.shields.io/badge/Pytorch-2.1.0-red)
-![IsaacGym](https://img.shields.io/badge/IsaacGym-Preview4.0-purple)
-# Setup
 
+### spawn robot
+```bash
+roslaunch cobot_simulation spawn_robot.launch
+```
+joint value is not fixed in this point. So when sim time pass, manipulator fall down
+
+## spawn robot with controller
+```bash
+roslaunch cobot_simulation spawn_robot_w_controller.launch
+```
+effort_controllers for hardware & JointPositionController for controller manager
+1. Use rostopic message publisher to control joint
+2. Use visualize plot to compare joint command & joint process value
+3. Use dynamic configuration to fine-tuning pid value
+
+## etc
+Check out original repository!! [repo](https://github.com/LearnRoboticsWROS/cobot)
+# Setup
 ## Install Isaac Gym
 Tested on Preview 4 version. [Isaac Gym Install](https://developer.nvidia.com/isaac-gym)
 
