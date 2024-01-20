@@ -2,7 +2,8 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:include filename="$(find cobot_simulation)/urdf/sensors/kinetic_rgb.gazebo.xacro"/>
-
+  
+  <!-- if not defined, camera doesn't spawn -->
   <xacro:macro name="dummy_inertial">
         <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -32,9 +33,7 @@
             </inertial>
             <visual>
                 <geometry>
-                <!--
-                <box size="0.06 0.1 0.03" />
-                    -->
+                <!-- <box size="0.06 0.1 0.03" /> -->
                             <mesh filename="package://cobot_simulation/meshes/sensors/camera/kinetic.stl"/>
                 </geometry>
                 <material name="DarkGrey"/>

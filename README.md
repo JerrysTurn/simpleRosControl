@@ -29,6 +29,13 @@ effort_controllers for hardware & JointPositionController for controller manager
 2. Use visualize plot to compare joint command & joint process value
 3. Use dynamic configuration to fine-tuning pid value
 
+### Add camera at the top of manipulator
+
+### moveit configuration installation
+```bash
+sudo apt-get install ros-noetic-moveit ros-noetic-moveit-plugins ros-noetic-moveit-planners
+roslaunch moveit_setup_assistant setup_assistant.launch
+```
 ## etc
 Check out original repository!! [repo](https://github.com/LearnRoboticsWROS/cobot)
 # Setup
